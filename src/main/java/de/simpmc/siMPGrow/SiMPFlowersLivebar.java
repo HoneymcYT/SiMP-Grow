@@ -4,6 +4,7 @@ package de.simpmc.siMPGrow;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
@@ -52,8 +53,8 @@ public class SiMPFlowersLivebar {
                 if (health > 0) {
                     health--;
                     boolean b = health <= 0;
-                    if health <=0) {
-    plantBlock.setType(Material.AIR);
+                    if health (<=0) {
+    plantBlock.setType(AIR);
     cancel();
     Bukkit.broadcastMessage("Deine SiMP-Flower ist verwelkt");
 
@@ -63,8 +64,12 @@ public class SiMPFlowersLivebar {
                     }
                     }
                 }
-        }.runTaskTimer(plugin 0L, 24 * 60 * 60 * 20L);
+
+            private void updateHealthDisplay() {
+            }
+        }.runTaskTimer(plugin 0L, 24 * 60 * 60 * 20L;);
         private void updateHealthDisplay() {
+            ArmorStand hologram;
             hologram.setVisible(false);
             hologram.setCustomName("HP: " + health + " / 8");
             hologram.setCustomNameVisible(true);
