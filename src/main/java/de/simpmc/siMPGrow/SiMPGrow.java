@@ -17,6 +17,9 @@ import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.entity.ItemFrame;
 import org.bukkit.metadata.FixedMetadataValue;
 
+import java.util.HashMap;
+import java.util.UUID;
+
 public final class SiMPGrow extends JavaPlugin implements Listener {
 
     @Override
@@ -30,6 +33,7 @@ public final class SiMPGrow extends JavaPlugin implements Listener {
     @Override
     public void onDisable() {
         getLogger().info("SiMPGrow ist ausgeschalten SIMPMC.");
+
         // Plugin shutdown logic
     }
     @EventHandler
@@ -62,3 +66,5 @@ public final class SiMPGrow extends JavaPlugin implements Listener {
         }
     }
 }
+
+

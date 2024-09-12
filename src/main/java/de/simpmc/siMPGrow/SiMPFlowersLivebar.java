@@ -58,6 +58,35 @@ public class SiMPFlowersLivebar {
     Bukkit.broadcastMessage("Deine SiMP-Flower ist verwelkt");
 
 
-    } else
+    } else {
+                        updateHealthDisplay();
+                    }
+                    }
+                }
+        }.runTaskTimer(plugin 0L, 24 * 60 * 60 * 20L);
+        private void updateHealthDisplay() {
+            hologram.setVisible(false);
+            hologram.setCustomName("HP: " + health + " / 8");
+            hologram.setCustomNameVisible(true);
+            hologram.setMarker(true);
+            hologram.setGravity(false);
+            hologram.setInvulnerable(true);
+            hologram.setSmall(true);
 
-}
+
+            new BukkitRunnable() {
+            @Override
+            public void run() {
+            hologram.remove();
+            }
+            }.runTaskLater(plugin, 60L);
+
+        }
+        public void stopPlantLifeCycle() {
+            if (plantLifeTask != null && !plantLifeTask.isCancelled()) {
+            plantLifeTask.cancel();}
+        }
+        }
+
+        }
+
