@@ -1,0 +1,9 @@
+name: SiMPGrow
+version: '1.0-SNAPSHOT.SiMPGrow'
+main: de.simpmc.siMPGrow.SiMPGrow
+api-version: '1.20'
+prefix: Honeyistcool
+load: STARTUP
+authors: [ Honey der Gstar xD ]
+description: SiMPMC.DE
+website: simpmc.de
